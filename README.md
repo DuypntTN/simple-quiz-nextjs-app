@@ -35,3 +35,16 @@ Scenarios:
 ![Wrong Answer](/simple-quiz-app/Images/quiz2.png)
 3. When completed the quiz, the user is presented with the result page in final.
 ![Result Page](/simple-quiz-app/Images/quiz4.png)
+
+## Technologies Used
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+## Project structure explanation
+![Project Structure](/simple-quiz-app/Images/struc.png)
+- The `app` folder contains the main application components.
+- The `app/page.tsx` is the main page of the application. (also the introduction page)
+- The `app/play` folder contains the components for the quiz page. (The quiz page is the main page of the application)
+- The `app/success` folder contains the components for the result page. (The result page is the final page of the application)

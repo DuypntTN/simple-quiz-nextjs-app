@@ -1,7 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 
 
 export default function Home() {
+  const handleNavigateToQuizPage : () => void = () => {
+
+  }
   return (
     /* App Structure */
     <main className="
@@ -18,7 +22,9 @@ export default function Home() {
       {/* Title */}
       <h1 className="text-4xl font-bold text-white mb-5">Simple Quiz App</h1> 
       {/* Start Quiz Button */}
-      <button className="bg-white text-black font-bold py-2 px-4 rounded-lg">Start Quiz</button>
+      <Link 
+        href="/play"
+      className="bg-white text-black font-bold py-2 px-4 rounded-lg">Start Quiz</Link>
     </main>
   );
 }

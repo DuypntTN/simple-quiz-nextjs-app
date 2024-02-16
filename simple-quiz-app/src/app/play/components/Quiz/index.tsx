@@ -1,8 +1,9 @@
 // Use client
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../Button'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // Component: Quiz
 // Description:
 // This component will be used to render a quiz (a question and multiple choice answers)
@@ -22,9 +23,11 @@ import Button from '../Button'
 interface QuizProps {
   question: string
   answers: string[]
-  correctAnswer: number
-  onAnswerSelected: (answer: string) => void
-  hint: string
+  correctAnswer: number | number[]
+  onAnswerSelected: (answer: number|number[]) => void
+  hint: string,
+  showCorrectAnswer: boolean,
+  multipleChoice?: boolean
 }
 
 const Quiz: React.FC<QuizProps> = ({
@@ -33,14 +36,44 @@ const Quiz: React.FC<QuizProps> = ({
   correctAnswer,
   onAnswerSelected,
   hint,
+  showCorrectAnswer,
+  multipleChoice,
 }) => {
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null | string[]>(null)
   const [showHint, setShowHint] = React.useState(false)
-  const handleAnswerClick = (answer: string) => {
-    setSelectedAnswer(answer)
-    onAnswerSelected(answer)
+  const [indexs, setIndexs] = React.useState([] as number[])
+
+  const handleAnswerClick = (answer: string,index:number) => {
+    if(multipleChoice){
+      setSelectedAnswer((prev) => {
+        if(prev === null){
+          return [answer]
+        }
+        if(Array.isArray(prev)){
+          if(prev.includes(answer)){
+            return prev.filter((ans) => ans !== answer)
+          }
+          return [...prev, answer]
+        }
+        return [prev]
+      })
+      if(indexs.includes(index) === false){
+        indexs.push(index)
+      }else{
+        indexs.splice(indexs.indexOf(index), 1)
+      }
+      onAnswerSelected(indexs)
+      setIndexs(indexs)
+    }else{
+      setSelectedAnswer(answer)
+      onAnswerSelected(index)
+    }
   }
 
+  useEffect(() => {
+    setShowHint(false)
+    setSelectedAnswer(null)
+  }, [hint, question, answers, correctAnswer])
   return (
     <div
       className="
@@ -81,8 +114,13 @@ const Quiz: React.FC<QuizProps> = ({
                     select-none
                     hover:bg-blue-500
                     hover:text-white
-                ${selectedAnswer === answer ? 'opacity-70 hover:bg-white hover:text-black' : ''}`}
-                onClick={() => handleAnswerClick(answer)}
+                    ${showCorrectAnswer && correctAnswer === index ? 'bg-green-500 text-white' : ''}
+                ${selectedAnswer === answer && multipleChoice === false? 'opacity-70 hover:bg-white hover:text-black' : ''}
+                  ${selectedAnswer?.includes(answer) && multipleChoice === true ? 'opacity-70 hover:bg-white hover:text-black' : ''}
+                `
+              
+              }
+                onClick={() => handleAnswerClick(answer,index)}
             >
                 {answer}
             </button>

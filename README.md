@@ -27,11 +27,11 @@ Scenarios:
 1. When the application starts, the user is presented with a welcome page that contains a button to start the quiz.
 ![Welcome Page](/simple-quiz-app/Images/intro.png)
 2. When the user clicks on the start button, the user is presented with the first question.
-![First Question](/Images/quiz.png)
+![First Question](/simple-quiz-app/Images/quiz.png)
 - In the quiz page, the user can select an answer by clicking on single or multiple options.
-![Multiple Options](/Images/quiz3.png)
-![Single Option](/Images/quiz1.png)
+![Multiple Options](/simple-quiz-app/Images/quiz3.png)
+![Single Option](/simple-quiz-app/Images/quiz1.png)
 - If the user answers wrongly, a toast message is displayed to inform the user that the answer is wrong.
-![Wrong Answer](/Images/quiz2.png)
+![Wrong Answer](/simple-quiz-app/Images/quiz2.png)
 3. When completed the quiz, the user is presented with the result page in final.
-![Result Page](/Images/quiz4.png)
+![Result Page](/simple-quiz-app/Images/quiz4.png)

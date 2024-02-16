@@ -48,3 +48,18 @@ Scenarios:
 - The `app/page.tsx` is the main page of the application. (also the introduction page)
 - The `app/play` folder contains the components for the quiz page. (The quiz page is the main page of the application)
 - The `app/success` folder contains the components for the result page. (The result page is the final page of the application)
+
+## Features
+- The application is responsive and can be used on any device.
+- The application is built with TypeScript and has a type-safe codebase.
+- The application is built with Tailwind CSS and has a clean and modern UI.
+- The application is built with Next.js and has a fast and optimized performance.
+
+## Future Improvements
+- Add a timer to the quiz page to limit the time for each question.
+- Add a feature to save the user's result to the database.
+- Add a feature to allow the user to share their result on social media.
+- More...
+
+## Author
+- [Asley Duy](www.linkedin.com/in/duy-phan-nguyen-thanh-794a1b183)

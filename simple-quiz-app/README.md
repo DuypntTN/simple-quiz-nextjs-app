@@ -14,23 +14,24 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Project Name: Simple Quiz App
+Purpose: This application is an assignment for the position of Full Stack Developer at VaniHeros. The application is a simple quiz app that allows users to answer questions and get their results at the end of the quiz.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To Start the Application:
+1. Clone the repository from the link provided.
+2. Run the command `npm install` to install all the dependencies.
+3. Run the command `npm run dev` to start the application.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Scenarios:
+1. When the application starts, the user is presented with a welcome page that contains a button to start the quiz.
+![Welcome Page](/Images/intro.png)
+2. When the user clicks on the start button, the user is presented with the first question.
+![First Question](/Images/quiz.png)
+- In the quiz page, the user can select an answer by clicking on single or multiple options.
+![Multiple Options](/Images/quiz3.png)
+![Single Option](/Images/quiz1.png)
+- If the user answers wrongly, a toast message is displayed to inform the user that the answer is wrong.
+![Wrong Answer](/Images/quiz2.png)
+3. When completed the quiz, the user is presented with the result page in final.
+![Result Page](/Images/quiz4.png)

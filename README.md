@@ -1,6 +1,6 @@
 - Project Name: Simple Quiz App
-- Purpose: This application is an assignment for the position of Full Stack Developer at VaniHeros. The application is a simple quiz app that allows users to answer questions and get their results at the end of the quiz.
-
+- Purpose: This application is an assignment for the position of Full Stack Developer at ![VaniHeros](https://www.linkedin.com/company/vani-heroes/). The application is a simple quiz app that allows users to answer questions and get their results at the end of the quiz.
+- Live Demo: [Simple Quiz App](https://simple-quiz-nextjs-app.vercel.app/)
 To Start the Application:
 1. Clone the repository from the link provided.
 2. Run the command `npm install` to install all the dependencies.

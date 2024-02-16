@@ -25,7 +25,7 @@ To Start the Application:
 
 Scenarios:
 1. When the application starts, the user is presented with a welcome page that contains a button to start the quiz.
-![Welcome Page](/Images/intro.png)
+![Welcome Page]("./simple-quiz-app/Images/intro.png")
 2. When the user clicks on the start button, the user is presented with the first question.
 ![First Question](/Images/quiz.png)
 - In the quiz page, the user can select an answer by clicking on single or multiple options.

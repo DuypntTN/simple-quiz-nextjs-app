@@ -1,21 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Project Name: Simple Quiz App
-Purpose: This application is an assignment for the position of Full Stack Developer at VaniHeros. The application is a simple quiz app that allows users to answer questions and get their results at the end of the quiz.
+- Project Name: Simple Quiz App
+- Purpose: This application is an assignment for the position of Full Stack Developer at VaniHeros. The application is a simple quiz app that allows users to answer questions and get their results at the end of the quiz.
 
 To Start the Application:
 1. Clone the repository from the link provided.
